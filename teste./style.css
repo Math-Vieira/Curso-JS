@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.caixa {
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
+.caixa::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    transition: 0.3s;
+    left: 50%;
+    
+}
+
+.caixa:hover::after{
+    width: 50%;
+    left: 25%;
+}
